@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MasConstruccionyMto</title>
+    <link rel="icon" href="img/logo.ico"> <!--icono en la pagina-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/carrito.css">
+
+</head>
+<body>
+    <!--Creacion de Menu-->
+     <nav>
+        <div class="logo">🔧 Mas+<span>Construcción</span> & Mantenimiento</div>
+        <ul>
+            <li><a href="index.html">Pagina Principal</a></li>
+            <li><a href="Servicios.html">Servicios</a></li>
+            <li><a href="Portafolio.html">Portafolio</a></li>
+            <li><a href="Contacto.html">Contacto</a></li>
+        </ul>
+        <button class="nav-cart" onclick="openCart()">
+            🛒 Carrito <span class="cart-badge" id="cartBadge">0</span>
+        </button>
+    </nav>
+
+    <!-- Encabezado de la página -->
+    <header class="section-header">
+        <h1>Nuestros Proyectos</h1>
+        <p class="subtitle">Impulsamos el crecimiento a través de proyectos innovadores que transforman ideas en resultados.</p>
+    </header>
+
+    <!-- Contenedor de los servicios-->
+    <main class="contact-container">
+        <section class="portfolio-grid">
+            <div class="portfolio-card">
+                <img src="img/casa.mallbq.png">
+                <img src="img/mallplaza.logo.png">
+                <h3>Mall Plaza Barranquilla</h3>
+                <ul>
+                    <li>Adecuaciones Locativas</li>
+                    <li>Intervenciones de fachada</li>
+                </ul>
+            </div>
+            <div class="portfolio-card">
+                <img src="img/Malva.png">
+                <img src="img/logo.malva.png">
+                <h3>Malva</h3>
+                <ul>
+                    <li>Intervenciones de fachadas</li>
+                    <li>Cubiertas y cielos </li>
+                </ul>
+            </div>
+            <div class="portfolio-card">
+                <img src="img/casalim.op.png">
+                <img src="img/casalimpia.png">
+                <h3>Casalimpia / Barranquilla y Cartagena</h3>
+                <ul>
+                    <li>Mantenimientos Correctivos</li>
+                    <li>Mantenimientos Preventivos y Predictivos</li>
+                </ul>
+            </div>
+            <div class="portfolio-card">
+                <img src="img/enf-obra.png">
+                <img src="img/enfoque sas.png">
+                <h3>Enfoque Constructores SAS</h3>
+                <ul>
+                    <li>Construcciones civiles</li>
+                    <li>Pavimentos</li>
+                </ul>
+            </div>
+            <div class="portfolio-card">
+                <img src="img/Tigo.png">
+                <img src="img/ope-tigo.png">
+                <img src="img/Logo_Tigo.png">
+                <h3>Casalimpia - Tigo / Nivel costa, Uraba y Bajo Cauca</h3>
+                <ul>
+                    <li>Adecuaciones Locativas</li>
+                    <li>Gestión de mantenimiento</li>
+                </ul>
+            </div>
+            <div class="portfolio-card">
+                <img src="img/d1.png">
+                <img src="img/d1logo.png">
+                <h3>Tiendas D1 / Barranquilla</h3>
+                <ul>
+                    <li>Construcción de tiendas</li>
+                    <li>Adecuación locativa y espacios</li>
+                </ul>
+            </div>
+            <div class="portfolio-card">
+                <img src="img/mall-ctg.png">
+                <img src="img/mallplaza.logo.png">
+                <h3>Mall Plaza Cartagena</h3>
+                <ul>
+                    <li>Adecuaciones Locativas</li>
+                    <li>Operaciones de obra civil a gran escala</li>
+                </ul>
+            </div>
+            <div class="portfolio-card">
+                <img src="img/americanino.png">
+                <img src="img/nafnaf.png">
+                <img src="img/tg.logo.png">
+                <h3>Talent Group</h3>
+                <ul>
+                    <li>Adecuaciones Locativas y desmontes</li>
+                    <li>Mantenimientos Correctivos y preventivos</li>
+                </ul>
+            </div>
+            <div class="portfolio-card">
+                <img src="img/serv-obra.png">
+                <img src="img/serviecologia.png">
+                <h3>Serviecológica</h3>
+                <ul>
+                    <li>Proyectos Ambientales</li>
+                    <li>Fumigaciones</li>
+                </ul>
+            </div>
+            <div class="portfolio-card">
+                <img src="img/dunkin.png">
+                <img src="img/dunkin.logo.png">
+                <h3>Donucol SA</h3>
+                <ul>
+                    <li>Mantenimientos Correctivos eléctricos y Civiles</li>
+                    <li>Traslados e instalación de tiendas</li>
+                </ul>
+            </div>
+            <div class="portfolio-card">
+                <img src="img/col.obra.png">
+                <img src="img/col.logo.png">
+                <h3>Colpensiones</h3>
+                <ul>
+                    <li>Mantenimientos locativos general</li>
+                    <li>Sedes Colpensiones nivel costa</li>
+                </ul>
+            </div>
+            <div class="portfolio-card">
+                <img src="img/Cine.png">
+                <img src="img/cine.logo.png">
+                <h3>Cinemas Procinal</h3>
+                <ul>
+                    <li>Impermeabilización de cubierta</li>
+                    <li>Antiguo Teatro Córdoba</li>
+                </ul>
+            </div>
+            <div class="portfolio-card">
+                <img src="img/dhl.png">
+                <img src="img/credibanco-cartagena.png">
+                <img src="img/summar.png">
+                <h3>Summar Productividad / Cartagena</h3>
+                <ul>
+                    <li>Impermeabilización en poliurea</li>
+                    <li>Cerramientos y demoliciones</li>
+                </ul>
+            </div>
+            <div class="portfolio-card">
+                <img src="img/arturo.png">
+                <img src="img/art.logo.png">
+                <h3>Arturo Calle</h3>
+                <ul>
+                    <li>Intervenciones de pisos locales</li>
+                    <li>Adecuaciones Locativas</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <div id="cartSidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Mi Solicitud 🛒</h3>
+            <button class="close-cart" onclick="closeCart()">&times;</button>
+        </div>
+        <div id="cartItems" class="cart-items"></div>
+        <div class="cart-footer">
+            <div class="cart-total-line">
+                <span>Total de Servicios:</span><strong id="cartTotal">0</strong>
+            </div>
+            <div class="divider"></div>
+            <button class="btn-send" onclick="sendSolicitud()">Enviar Solicitud</button>
+        </div>
+    </div>
+
+    <form id="cartForm" action="https://formspree.io/f/maqkgell" method="POST" style="display:none;">
+        <input type="hidden" name="Detalle_de_Servicios" id="cartDataInput">
+        <input type="hidden" name="Total_Estimado" id="totalDataInput">
+    </form>
+
+    
+    <footer>
+        <p>&copy;2026 <strong>Mas+Construcción</strong> & Mantenimiento S.A.S· Cartagena, Colombia · ☎ 302 1236235 · administracion@masconstruccionymto.com</p>
+        <p> Todos los derechos reservados.</p>
+
+    <!--Se crea un enlance para separ el JS de html para que sea mas organizado-->
+    <script src="js/carrito.js"></script>
+    
+</body>
+</html>

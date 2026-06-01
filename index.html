@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MasConstruccionyMto</title>
+    <link rel="icon" href="img/logo.ico"> <!--icono en la pagina-->
+    <link rel="stylesheet" href="css/inicio.css">
+    <link rel="stylesheet" href="css/carrito.css">
+
+</head>
+<body>
+    <!--Creacion de Menu-->
+    <nav>
+        <div class="logo">🔧 Mas+<span>Construcción</span> & Mantenimiento</div>
+        <ul>
+            <li><a href="index.html">Pagina Principal</a></li>
+            <li><a href="Servicios.html">Servicios</a></li>
+            <li><a href="Portafolio.html">Portafolio</a></li>
+            <li><a href="Contacto.html">Contacto</a></li>
+        </ul>
+        <button class="nav-cart" onclick="openCart()">
+            🛒 Carrito <span class="cart-badge" id="cartBadge">0</span>
+        </button>
+    </nav>
+    <!-- HERO -->
+    <section class="hero">
+        <h1>Los proyectos se afianzan <span>con buenas estrategias</span></h1>
+        <p>Ofrecemos soluciones eficientes, innovadoras y de alta calidad, respaldadas por un equipo experto comprometido con el cumplimiento y la confianza en cada servicio.</p>
+        <div class="hero-btns">
+            <button class="btn-pri" onclick="window.location.href='servicios.html'">Ver Servicios</button>
+        </div>
+    </section>
+    <!-- STATS -->
+    <div class="stats">
+        <div class="stat"><strong>+350</strong><span>Proyectos completados</span></div>
+        <div class="stat"><strong>4.9★</strong><span>Calificación promedio</span></div>
+        <div class="stat"><strong>8</strong><span>Años de experiencia</span></div>
+        <div class="stat"><strong>24h</strong><span>Atencion al cliente</span></div>
+    </div>
+    <!-- TRES CUADROS -->
+    <section class="corporate-section">
+        <div class="corporate-grid"> 
+            <article class="corp-card">
+                <h3>Misión</h3>
+                <p>Brindar a nuestros clientes productos y servicios integrales como Ingenieros Consultores y Constructores, asegurando un alto grado de confiabilidad, precisión, ética y responsabilidad, apoyándonos en la experiencia y conocimiento acumulado...</p>
+            </article>
+            <div class="corp-video">
+                <iframe 
+                width="100%" 
+                height="315" 
+                src="https://www.youtube.com/embed/aHwtg07y1O8" 
+                title="Video Corporativo Mas+Construcción" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+        <article class="corp-card">
+            <h3>Visión</h3>
+            <p>La investigación como base de nuestro proceso de desarrollo y la búsqueda constante de métodos que nos permitan la optimización y eficiencia en el uso de nuestros recursos... proyectándonos como una empresa líder en mejoras a los procesos y pioneros en el desarrollo.</p>
+        </article>
+    </section>
+    
+    <!-- CART MODAL -->
+    <div id="cartSidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Mi Solicitud 🛒</h3>
+            <button class="close-cart" onclick="closeCart()">&times;</button>
+        </div>
+        <div id="cartItems" class="cart-items"></div>
+        <div class="cart-footer">
+            <div class="cart-total-line">
+                <span>Total de Servicios:</span><strong id="cartTotal">0</strong>
+            </div>
+            <div class="divider"></div>
+            <button class="btn-send" onclick="sendSolicitud()">Enviar Solicitud</button>
+        </div>
+    </div>
+
+    <form id="cartForm" action="https://formspree.io/f/maqkgell" method="POST" style="display:none;">
+        <input type="hidden" name="Detalle_de_Servicios" id="cartDataInput">
+        <input type="hidden" name="Total_Estimado" id="totalDataInput">
+    </form>
+
+    <footer>
+        <p>&copy;2026 <strong>Mas+Construcción</strong> & Mantenimiento S.A.S· Cartagena, Colombia · ☎ 302 1236235 · administracion@masconstruccionymto.com</p>
+        <p> Todos los derechos reservados.</p>
+    </footer>
+    
+    <!--Se crea un enlance para separ el JS de html para que sea mas organizado-->
+    <script src="js/carrito.js"></script>
+    <script src="js/servicios.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MasConstruccionyMto</title>
+    <link rel="icon" href="img/logo.ico"> <!--icono en la pagina-->
+    <link rel="stylesheet" href="css/inicio.css">
+    <link rel="stylesheet" href="css/carrito.css">
+
+</head>
+<body>
+    <!--Creacion de Menu-->
+     <nav>
+        <div class="logo">🔧 Mas+<span>Construcción</span> & Mantenimiento</div>
+        <ul>
+            <li><a href="index.html">Pagina Principal</a></li>
+            <li><a href="Servicios.html">Servicios</a></li>
+            <li><a href="Portafolio.html">Portafolio</a></li>
+            <li><a href="Contacto.html">Contacto</a></li>
+        </ul>
+        <button class="nav-cart" onclick="openCart()">
+            🛒 Carrito <span class="cart-badge" id="cartBadge">0</span>
+        </button>
+    </nav>
+    
+    <!-- CATALOG --> 
+    <section class="catalog-section">
+        <h2>Nuestros Servicios</h2>
+        <p class="subtitle">Selecciona un servicio y agrégalo a tu solicitud</p>
+        <div class="cards-grid" id="cardsGrid">
+            <div class="card" data-id="1">
+                <div class="card-img" >
+                    <span class="card-badge popular">+ Pedido</span>
+                </div>
+                <div class="card-body">
+                    <div class="card-cat">REMODELACION</div>
+                    <div class="card-name">Remodelación Integral de Cocina</div>
+                    <div class="card-desc">Modernizamos tu cocina </div>
+                    <div class="card-meta">
+                        <span>⏱ 7-12 días</span>
+                        <span class="stars">★</span><span>4.9</span>
+                    </div>
+                    <div class="card-footer">
+                        <div>
+                            <span class="price-from">Desde</span>
+                            <span class="price">1</span>
+                        </div>
+                        <button class="btn-add " onclick="addToCart(1)"> + Solicitar </button>
+                    </div>
+                </div>
+            </div>
+            <div class="card" data-id="2">
+                <div class="card-img" > </div>
+                <div class="card-body">
+                    <div class="card-cat">CONSTRUCCION</div>
+                    <div class="card-name">Construcción de Cuarto Adicional</div>
+                    <div class="card-desc">Ampliación de espacios en drywall, con acabados y pintura incluida.</div>
+                    <div class="card-meta">
+                        <span>⏱ 15-25 días</span>
+                        <span class="stars">★</span><span>4.8</span>
+                    </div>
+                    <div class="card-footer">
+                        <div>
+                            <span class="price-from">Desde</span>
+                            <span class="price">1</span>
+                        </div>
+                        <button class="btn-add " onclick="addToCart(2)"> + Solicitar </button>
+                    </div>
+                </div>
+            </div>
+            <div class="card" data-id="3">
+                <div class="card-img" >
+                    <span style="font-size:3rem">🚿</span>
+                    <span class="card-badge popular">+ Pedido</span>
+                </div>
+                <div class="card-body">
+                    <div class="card-cat">REMODELACION</div>
+                    <div class="card-name">Remodelación de Baño Completo</div>
+                    <div class="card-desc">Cerámica, sanitarios, grifería y pintura.</div>
+                    <div class="card-meta">
+                        <span>⏱ 5-8 días</span>
+                        <span class="stars">★</span><span>5.0</span>
+                    </div>
+                    <div class="card-footer">
+                        <div>
+                            <span class="price-from">Desde</span>
+                            <span class="price">1</span>
+                        </div>
+                        <button class="btn-add " onclick="addToCart(3)"> + Solicitar </button>
+                    </div>
+                </div>
+            </div>
+            <div class="card" data-id="4">
+                <div class="card-img" >
+                    <span style="font-size:3rem">🔧</span>
+                </div>
+                <div class="card-body">
+                    <div class="card-cat">REPARACION</div>
+                    <div class="card-name">Plomería y Reparación de Fugas</div>
+                    <div class="card-desc">Detección y reparación de fugas, cambio de tuberías e instalación de sanitarios.</div>
+                    <div class="card-meta">
+                        <span>⏱ 1-2 días</span>
+                        <span class="stars">★</span><span>4.7</span>
+                    </div>
+                    <div class="card-footer">
+                        <div>
+                            <span class="price-from">Desde</span>
+                            <span class="price">1</span>
+                        </div>
+                        <button class="btn-add " onclick="addToCart(4)"> + Solicitar </button>
+                    </div>
+                </div>
+            </div>
+            <div class="card" data-id="5">
+                <div class="card-img">
+                    <span style="font-size:3rem">🔩</span>
+                </div>
+                <div class="card-body">
+                    <div class="card-cat">MONTAJE</div>
+                    <div class="card-name">Montaje y Armado de Muebles</div>
+                    <div class="card-desc">Armado profesional de todo tipo de muebles.</div>
+                    <div class="card-meta">
+                        <span>⏱ 1 día</span>
+                        <span class="stars">★</span><span>4.9</span>
+                    </div>
+                    <div class="card-footer">
+                        <div>
+                            <span class="price-from">Desde</span>
+                            <span class="price">1</span>
+                        </div>
+                        <button class="btn-add " onclick="addToCart(5)"> + Solicitar </button>
+                    </div>
+                </div>
+            </div>
+            <div class="card" data-id="6">
+                <div class="card-img">
+                    <span style="font-size:3rem">⚡</span>
+                </div>
+                <div class="card-body">
+                    <div class="card-cat">REPARACION</div>
+                    <div class="card-name">Instalaciones Eléctricas</div>
+                    <div class="card-desc">Puntos nuevos, cambio de tableros, instalación de luminarias y tomas corriente.</div>
+                    <div class="card-meta">
+                        <span>⏱ 1-3 días</span>
+                        <span class="stars">★</span><span>4.8</span>
+                    </div>
+                    <div class="card-footer">
+                        <div>
+                            <span class="price-from">Desde</span>
+                            <span class="price">1</span>
+                        </div>
+                        <button class="btn-add " onclick="addToCart(6)"> + Solicitar </button>
+                    </div>
+                </div>
+            </div>
+            <div class="card" data-id="7">
+                <div class="card-img">
+                    <span style="font-size:3rem">🪟</span>
+                </div>
+                <div class="card-body">
+                    <div class="card-cat">CONSTRUCCION</div>
+                    <div class="card-name">Instalación de Ventanas y Puertas</div>
+                    <div class="card-desc">Instalación de marcos, puertas macizas, ventanas de aluminio y vidrio templado.</div>
+                    <div class="card-meta">
+                        <span>⏱ 2-4 días</span>
+                        <span class="stars">★</span><span>4.6</span>
+                    </div>
+                    <div class="card-footer">
+                        <div>
+                            <span class="price-from">Desde</span>
+                            <span class="price">1</span>
+                        </div>
+                        <button class="btn-add " onclick="addToCart(7)"> + Solicitar </button>
+                    </div>
+                </div>
+            </div>
+            <div class="card" data-id="8">
+                <div class="card-img">
+                    <span style="font-size:3rem">🎨</span>
+                    <span class="card-badge ">Desde $/m²</span>
+                </div>
+                <div class="card-body">
+                    <div class="card-cat">REMODELACION</div>
+                    <div class="card-name">Pintura Interior y Exterior</div>
+                    <div class="card-desc">Preparación de superficies, resane y pintura.</div>
+                    <div class="card-meta">
+                        <span>⏱ 2-5 días</span>
+                        <span class="stars">★</span><span>4.9</span>
+                    </div>
+                    <div class="card-footer">
+                        <div>
+                            <span class="price-from">Desde</span>
+                            <span class="price">1</span>
+                        </div>
+                        <button class="btn-add " onclick="addToCart(8)"> + Solicitar </button>
+                    </div>
+                </div>
+            </div>
+            <div class="card" data-id="9">
+                <div class="card-img">
+                    <span style="font-size:3rem">🖼️</span>
+                </div>
+                <div class="card-body">
+                    <div class="card-cat">MONTAJE</div>
+                    <div class="card-name">Instalación de Pisos Laminados</div>
+                    <div class="card-desc">Instalación de pisos flotantes, laminados o vinílicos.</div>
+                    <div class="card-meta">
+                        <span>⏱ 1-3 días</span>
+                        <span class="stars">★</span><span>4.7</span>
+                    </div>
+                    <div class="card-footer">
+                        <div>
+                            <span class="price-from">Desde</span>
+                            <span class="price">1</span>
+                        </div>
+                        <button class="btn-add " onclick="addToCart(9)"> + Solicitar </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="cartSidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Mi Solicitud 🛒</h3>
+            <button class="close-cart" onclick="closeCart()">&times;</button>
+        </div>
+        <div id="cartItems" class="cart-items"></div>
+        <div class="cart-footer">
+            <div class="cart-total-line">
+                <span>Total de Servicios:</span><strong id="cartTotal">0</strong>
+            </div>
+            <div class="divider"></div>
+            <button class="btn-send" onclick="sendSolicitud()">Enviar Solicitud</button>
+        </div>
+    </div>
+
+    <form id="cartForm" action="https://formspree.io/f/maqkgell" method="POST" style="display:none;">
+        <input type="hidden" name="Detalle_de_Servicios" id="cartDataInput">
+        <input type="hidden" name="Total_Estimado" id="totalDataInput">
+    </form>
+    
+    <footer>
+        <p>&copy;2026 <strong>Mas+Construcción</strong> & Mantenimiento S.A.S· Cartagena, Colombia · ☎ 302 1236235 · administracion@masconstruccionymto.com</p>
+        <p> Todos los derechos reservados.</p>
+
+    <!--Se crea un enlance para separ el JS de html para que sea mas organizado-->
+    <script src="js/carrito.js"></script>
+    <script src="js/servicios.js"></script>
+    
+</body>
+</html>

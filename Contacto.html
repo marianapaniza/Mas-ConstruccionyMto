@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MasConstruccionyMto</title>
+    <link rel="icon" href="img/logo.ico"> <!--icono en la pagina-->
+    <link rel="stylesheet" href="css/contacto.css">
+    <link rel="stylesheet" href="css/carrito.css">
+
+</head>
+<body>
+    <!--Creacion de Menu-->
+     <nav>
+        <div class="logo">🔧 Mas+<span>Construcción</span> & Mantenimiento</div>
+        <ul>
+            <li><a href="index.html">Pagina Principal</a></li>
+            <li><a href="Servicios.html">Servicios</a></li>
+            <li><a href="Portafolio.html">Portafolio</a></li>
+            <li><a href="Contacto.html">Contacto</a></li>
+        </ul>
+        <button class="nav-cart" onclick="openCart()">
+            🛒 Carrito <span class="cart-badge" id="cartBadge">0</span>
+        </button>
+    </nav>
+
+    <!-- Encabezado de la página -->
+    <header class="section-header">
+        <h1>Póngase en Contacto</h1>
+        <p>Estamos listos para materializar sus proyectos de infraestructura, mantenimiento y construcción. Escríbanos</p>
+    </header>
+
+    <!-- Contenedor del Mapa y Formulario -->
+    <main class="contact-container">
+
+    <section class="map-card">
+        <div class="location-info">
+            <i class="fa-solid fa-map-pin"></i>
+            <div>
+                <p><strong>Oficina Principal</strong></p>
+                <span>Barrio Chile Sector prefab. Tr.47 m.77 local 4, Cartagena de Indias, Bolívar</span>
+            </div>
+        </div>
+        
+        <div class="iframe-container">
+            <iframe 
+                loading="lazy" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3924.341341032712!2d-75.5132575!3d10.3944405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef6252877241fe5%3A0xb68117b2d17d2da3!2sMas%2BConstrucci%C3%B3n%20%26%20Mantenimiento%20S.A.S!5e0!3m2!1ses-419!2sco!4v1780194840075!5m2!1ses-419!2sco"
+                title="Sede Cartagena" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+
+    <section class="form-card">
+        <h2>Enviar Mensaje</h2>
+        
+        <form id="contactForm" action="https://formspree.io/f/mqejobjn" method="POST">
+            <div class="input-group">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" name="nombre" id="nombre" required placeholder="Nombre Completo/Empresa">
+            </div>
+            
+            <div class="input-group">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" name="email" id="email" required placeholder="Correo Electrónico">
+            </div>
+            
+            <div class="input-group">
+                <i class="fa-solid fa-phone"></i>
+                <input type="tel" name="telefono" id="telefono" required placeholder="Número de Teléfono">
+            </div>
+            
+            <div class="input-group">
+                <i class="fa-solid fa-comment-dots"></i>
+                <textarea name="mensaje" id="mensaje" required placeholder="Escriba aquí los detalles de su proyecto..."></textarea>
+            </div>
+
+            <div class="acceptance-container">
+                <input type="checkbox" id="politicas" name="politicas" required>
+                <label for="politicas">Acepto las políticas de tratamiento de datos personales.</label>
+            </div>
+
+            <button type="submit" class="btn-submit">
+                <i class="fa-solid fa-paper-plane"></i> Enviar Solicitud
+            </button>
+        </form>
+    </section>
+    </main>
+
+
+    <div id="cartSidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Mi Solicitud 🛒</h3>
+            <button class="close-cart" onclick="closeCart()">&times;</button>
+        </div>
+        <div id="cartItems" class="cart-items"></div>
+        <div class="cart-footer">
+            <div class="cart-total-line">
+                <span>Total de Servicios:</span><strong id="cartTotal">0</strong>
+            </div>
+            <div class="divider"></div>
+            <button class="btn-send" onclick="sendSolicitud()">Enviar Solicitud</button>
+        </div>
+    </div>
+
+
+    <form id="cartForm" action="https://formspree.io/f/maqkgell" method="POST" style="display:none;">
+        <input type="hidden" name="Detalle_de_Servicios" id="cartDataInput">
+        <input type="hidden" name="Total_Estimado" id="totalDataInput">
+    </form>
+
+    
+    <footer>
+        <p>&copy;2026 <strong>Mas+Construcción</strong> & Mantenimiento S.A.S· Cartagena, Colombia · ☎ 302 1236235 · administracion@masconstruccionymto.com</p>
+        <p> Todos los derechos reservados.</p>
+
+    <!--Se crea un enlance para separ el JS de html para que sea mas organizado-->
+    <script src="js/info.js"></script> 
+    <script src="js/carrito.js"></script>
+    
+</body>
+</html>
