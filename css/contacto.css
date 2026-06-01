@@ -376,14 +376,20 @@ footer {
 .section-header h1 {
   font-size: 2rem;
 }
-/* MEDIA QUERY PARA PC */
-@media (min-width: 768px) {
-  .btn-add { width: auto; } /* En PC, el botón vuelve a su tamaño natural */
-  .catalog-section { padding: 4rem 2rem; }
-}
 
 /* Ajustes para pantallas muy pequeñas */
 @media (max-width: 480px) {
   .hero h1 { font-size: 1.5rem; }
   .cards-grid { padding: 0.5rem; }
+}
+/* Esto evita que cualquier imagen o contenedor se salga de la pantalla */
+img, video, canvas, iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Esto garantiza que nada empuje el diseño hacia los lados */
+body, html {
+    overflow-x: hidden;
+    width: 100%;
 }
