@@ -376,3 +376,14 @@ footer {
 .section-header h1 {
   font-size: 2rem;
 }
+/* MEDIA QUERY PARA PC */
+@media (min-width: 768px) {
+  .btn-add { width: auto; } /* En PC, el botón vuelve a su tamaño natural */
+  .catalog-section { padding: 4rem 2rem; }
+}
+
+/* Ajustes para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .hero h1 { font-size: 1.5rem; }
+  .cards-grid { padding: 0.5rem; }
+}
